@@ -1,0 +1,782 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans", sans-serif;
+  /* color: #121117; */
+}
+*:focus {
+  outline: none;
+}
+html {
+  max-width: 100%;
+  /* overflow-x: hidden; */
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+.it-85vh {
+  height: 85vh;
+}
+.it-100vh {
+  height: 100vh;
+}
+
+/* navbar */
+
+.itutor-logo {
+  height: 35px;
+  width: auto;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+nav {
+  font-weight: bold;
+}
+.circle {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border: 2px solid black;
+  background-color: transparent;
+  display: inline-block;
+}
+.it-question {
+  position: absolute;
+  top: -7;
+  right: 8px;
+  font-size: 18px;
+  font-weight: 800;
+}
+.bg-green {
+  background-color: #68bf67;
+}
+
+/* landing page */
+
+#landing-page {
+  height: 600px;
+  overflow: hidden;
+}
+.it-front-text {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 3.2rem;
+  color: #000;
+  font-weight: 700;
+  word-spacing: 5px;
+  letter-spacing: -4px;
+  line-height: 1.3;
+  margin: 3rem auto 0;
+}
+.it-get-started {
+  padding: 0.4rem 5rem;
+  margin: 2.5rem auto;
+}
+
+.it-landing-image1 {
+  height: 340px;
+  width: auto;
+  top: 50px;
+  left: 20px;
+  z-index: 3;
+}
+.it-landing-image2 {
+  height: 300px;
+  width: auto;
+  top: 70px;
+  left: 170px;
+  z-index: 2;
+}
+.it-landing-image3 {
+  height: 250px;
+  width: auto;
+  top: 90px;
+  left: 320px;
+  z-index: 1;
+}
+
+/* Subect section */
+
+#subject-section {
+  height: 500px;
+}
+.subject-arrow {
+  top: 4%;
+  right: 4%;
+}
+.subject-text {
+  font-size: 24px;
+  /* font-weight: bold; */
+}
+.it-black {
+  color: #121117;
+}
+.it-plus {
+  font-size: 28px;
+  margin-right: 5px;
+}
+.it-showmore {
+  font-size: 12px;
+  top: -5px;
+}
+
+/* Carousel section */
+
+#carousel-section {
+  height: 700px;
+}
+.it-carousel-heading {
+  font-size: 4.5rem;
+  font-weight: bold;
+}
+.it-pic1 {
+  width: 30%;
+  top: 110px;
+  right: 190px;
+}
+.it-pic2 {
+  width: 40%;
+  top: 80px;
+  right: 120px;
+}
+.it-pic3 {
+  width: 50%;
+  top: 50px;
+  right: 40px;
+}
+.tutor-subject {
+  border: 2px solid black;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 4px 8px;
+  font-weight: 700;
+}
+.tutor-name {
+  border: 2px solid black;
+  background-color: #ff9486;
+  border-radius: 5px;
+  padding: 4px 8px;
+  font-weight: 700;
+}
+.tutor-button {
+  z-index: 4;
+  top: 25rem;
+  right: 60px;
+}
+.tutor-text {
+  top: 100px;
+  width: 70%;
+}
+.tutor-text h3 {
+  margin-bottom: 50px;
+}
+.it-bold {
+  font-weight: 800;
+}
+.it-italic {
+  font-weight: 100;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%);
+}
+
+/* title section */
+
+#title-section {
+  height: 200px;
+  margin: 10px auto;
+}
+#title-section h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+#title-section p {
+  font-size: 1em;
+}
+
+/* itutor work section */
+
+#itutor-work-section {
+  height: 650px;
+  margin: 5rem auto;
+}
+
+.card-num {
+  background-color: #7bead6;
+  display: inline-block;
+  width: 3rem;
+  border-radius: 5px;
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: right;
+  padding: 10px 10px 5px 0;
+}
+#itutor-work-section > .container > h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: auto auto auto 1rem;
+}
+#itutor-work-section .card-body {
+  line-height: 1;
+}
+#itutor-work-section .card-body h2 {
+  margin-bottom: 1rem;
+}
+#itutor-work-section .card-h2 {
+  /* font-family: 'Platform'; */
+  font-size: 3rem;
+  font-weight: bold;
+}
+#itutor-work-section .card-text {
+  color: #121117;
+  font-weight: 200;
+}
+#itutor-work-section .card-para {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  font-weight: 100;
+  color: #4d4c5c;
+  padding-bottom: 1rem;
+}
+#itutor-work-section .card {
+  border-radius: 10px;
+}
+#itutor-work-section .card-setting {
+  overflow: hidden;
+  height: 600px;
+}
+.it-border3 {
+  border: 3px solid black;
+}
+.first-inner-card {
+  /* margin: 50px; */
+}
+.scnd-inner-card {
+  top: -30px;
+  left: 10px;
+  z-index: 1;
+}
+.third-inner-card {
+  top: -60px;
+  left: 20px;
+}
+.inner-cards-container {
+  padding-top: 50px;
+}
+
+/* Become tutor section */
+
+#become-tutor {
+  height: auto;
+}
+.bg-peach {
+  background-color: #ff9486;
+}
+#become-tutor h3 {
+  font-size: 4rem;
+  font-weight: 600;
+  width: 70%;
+}
+#become-tutor p {
+  color: #121117;
+  font-size: 0.9rem;
+  padding-left: 0.5rem;
+}
+#become-tutor ul li {
+  font-weight: bold;
+}
+
+/* Changing the game through education */
+
+#game-education {
+  height: 600px;
+}
+#game-education > .container > h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1.4;
+}
+#game-education .card-body {
+  height: 230px;
+}
+.num-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 4px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black; /* Change text color as needed */
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+/* future education  */
+
+#future-education {
+  height: 200px;
+}
+
+/* *************************************************Become tutor Page******************************************* */
+
+/* registration-form section */
+
+p {
+  color: #121117;
+}
+#registration-form {
+  overflow: hidden;
+}
+#registration-form h1 {
+  font-weight: 600;
+}
+#registration-form p {
+  opacity: 0.7;
+}
+.it-reg-image1 {
+  height: 250px;
+  width: auto;
+  top: 100px;
+  left: 20px;
+  z-index: 1;
+}
+.it-reg-image2 {
+  height: 300px;
+  width: auto;
+  top: 80px;
+  left: 120px;
+  z-index: 2;
+}
+.it-reg-image3 {
+  height: 340px;
+  width: auto;
+  top: 60px;
+  left: 250px;
+  z-index: 3;
+}
+
+/* Feature section */
+#feature-section .card-title {
+  font-size: 1.5rem;
+}
+
+/* More feature section */
+
+#more-feature {
+  overflow: hidden;
+}
+
+#more-feature p {
+  opacity: 0.7;
+}
+
+.more-feature-image1 {
+  height: 300px;
+  width: auto;
+  top: 0px;
+  left: 60px;
+  z-index: 3;
+}
+.more-feature-image2 {
+  height: 260px;
+  width: auto;
+  top: 140px;
+  left: 80px;
+  z-index: 2;
+}
+.more-feature-image3 {
+  height: 200px;
+  width: auto;
+  top: 280px;
+  left: 120px;
+  z-index: 1;
+}
+
+/* teacher remarks section */
+#teacher-remarks {
+  height: 500px;
+}
+.teacher-remark-image1 {
+  height: 250px;
+  width: auto;
+  top: 100px;
+  left: 20px;
+  z-index: 1;
+}
+.teacher-remark-image2 {
+  height: 300px;
+  width: auto;
+  top: 80px;
+  left: 120px;
+  z-index: 2;
+}
+.teacher-remark-image3 {
+  height: 340px;
+  width: auto;
+  top: 60px;
+  left: 250px;
+  z-index: 3;
+}
+
+/* frequently asked question section */
+
+.accordion-item {
+  background-color: white; /* Set background color to white */
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: white; /* Set background color to white when accordion is expanded */
+  color: #000; /* Set text color to black when accordion is expanded */
+  border-color: transparent; /* Remove border color when accordion is expanded */
+}
+
+/* get paid to teach section */
+
+#get-paid h3 {
+  font-size: 2.3rem;
+  font-weight: bold;
+  /* width: 80%; */
+}
+#get-paid p {
+  color: #121117;
+  font-size: 0.9rem;
+  padding-left: 0.3rem;
+  opacity: 0.7;
+}
+#get-paid .it-get-started {
+  padding: 0.4rem 7rem;
+}
+
+/* ********************************************Log in Page******************************************** */
+
+/* @media screen and (max-width: 769px){
+    #login-section{
+        width: 80%;
+    }
+} */
+
+/* *************************************************Find tutor Page********************************************* */
+
+/* large selects css */
+
+.selector {
+  /* width: 270px; */
+  position: relative;
+  /* z-index: 1; */
+}
+.selectField {
+  width: 100%;
+  padding: 5px 20px;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+  border: 2px solid #121117;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  margin-left: 1px;
+}
+.selectField:hover {
+  border: 2px solid #121117;
+}
+.selectField img {
+  width: 24px;
+  transition: transform 0.5s;
+}
+.subject-list {
+  width: 100%;
+  height: 300px;
+  border: 2px solid #121117;
+  border-radius: 6px;
+  box-shadow: 5px 5px 10px #a8a7ae;
+  background: rgba(255, 255, 255, 1);
+  overflow-y: scroll;
+  position: absolute;
+  top: calc(100% + 5px); /* Position below the select field */
+  left: 0;
+  z-index: 2; /* Ensure the list is above other elements */
+  display: none;
+}
+.subject-list.show {
+  display: block;
+}
+.subject-list::-webkit-scrollbar {
+  display: none;
+}
+ul {
+  padding: 0;
+}
+.options {
+  width: 100%;
+  padding: 15px 30px;
+  box-sizing: border-box;
+  list-style: none;
+  cursor: pointer;
+}
+.options:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+.hide {
+  display: none;
+}
+.rotate {
+  transform: rotate(180deg);
+}
+.background-fade {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#priceRange::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: green;
+  border-radius: 0; /* Squared edges */
+}
+
+#priceRange::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: green;
+  border-radius: 0; /* Squared edges */
+}
+
+#priceRange::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: green;
+  border-radius: 0; /* Squared edges */
+}
+
+/* small selects css */
+
+*:focus {
+  outline: none;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background-color: #68bf67;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.play-button::after {
+  content: "\f04b"; /* Unicode for play icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 2em;
+  color: white;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  margin: 5% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 800px;
+  position: relative;
+}
+
+.close {
+  color: #333;
+  position: absolute;
+  top: -15px;
+  right: 5px;
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: none; /* Optional: Remove box-shadow as well */
+}
+/* .pagination-active{
+    z-index: 3;
+    color: #121117;
+    background-color: #68bf67;
+    border-color: 1px solid #fff;
+} */
+.pagination-custom .page-item.active .page-link {
+  background-color: #68bf67; /* Blue background color */
+  border-color: #fff; /* Blue border color */
+  color: #fff; /* White text color */
+}
+.pagination-custom .page-item .page-link {
+  color: #121117; /* White text color */
+  cursor: pointer;
+}
+/* ****************************************Tutor form page********************************************* */
+
+/* ******************************************Profile view*************************************************** */
+
+.link-item {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding-bottom: 5px; /* Add padding below the link text */
+  position: relative; /* Position relative for absolute positioning of the underline */
+}
+
+.link-item::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px; /* Height of the underline */
+  background-color: #68bf67; /* Color of the underline */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.4s; /* Smooth transition for the underline */
+}
+
+.link-item:hover::after,
+.link-item:active::after {
+  width: 100%; /* Expand the underline to full width on hover or active */
+}
+
+.box-shadow {
+  box-shadow: 0 2px rgba(150, 150, 150, 0.1);
+}
+
+.frame-hide {
+  display: none !important;
+}
+
+.schedule-arrow:hover {
+  background-color: #68bf67;
+}
+
+.current-date {
+  color: #68bf67;
+}
+
+.disabled-link {
+    pointer-events: none; /* Disable pointer events */
+    opacity: 0.5; /* Reduce opacity to indicate it's disabled */
+    text-decoration: none; /* Remove underline */
+    color: #ccc; /* Change text color to gray */
+}
+
+
+/* *******************************************Profile view end************************************************* */
+
+/* *******************************************Lessons start************************************************* */
+
+    /* Basic styling for the calendar */
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-gap: 1px;
+      /* background-color: #f0f0f0; */
+  }
+
+  .day {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      border-radius: 10px;
+  }
+
+  .highlight {
+      background-color: #68bf67; /* Highlight color for days with classes */
+  }
+
+  .day-header {
+      padding: 10px;
+      font-weight: bold;
+      text-align: center;
+      border: 1px solid #ccc;
+      background-color: #68bf67;
+  }
+
+  .table-cell {
+    min-width: 200px; /* Set the minimum width for each cell */
+    /* Add more styles as needed */
+}
+
+/* *******************************************Lessons end************************************************* */
+
+/*********************************** media queries seciton start *******************************************/
+
+/* Small devices (phones, 576px and up) */
+@media (max-width: 768px) {
+  #tutor-signup,
+  #login-section,
+  #signup-section {
+    width: 95% !important;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #tutor-signup,
+  #login-section,
+  #signup-section {
+    width: 70% !important;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #tutor-signup,
+  #login-section,
+  #signup-section {
+    width: 30% !important;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* media queries seciton end */
