@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // echo $_SESSION['userId'].'    ';
             // echo $_SESSION['userImg'];
             // exit;
-            header('location: \iTutor\find-tutor.php');
+            header('location: \iTutor\lessons.php');
           }
 
         } else {

@@ -72,9 +72,12 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               
+            <?php if ($_SESSION['userType'] != 'Teacher'): ?>
               <li class="nav-item mt-1 ms-2">
                 <a class="nav-link" aria-current="page" href="find-tutor.php">Find tutors</a>
               </li>
+            <?php endif; ?>
+
 
               <?php if (!isset($_SESSION['userId'])): ?>
               <li class="nav-item mt-1 ms-2">

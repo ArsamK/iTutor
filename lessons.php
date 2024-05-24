@@ -99,6 +99,10 @@ include ('layout/header.php');
           <?php
           $count++;
         }
+      } 
+      
+      if($count == 1){
+      echo "<div>No upcoming lessons.</div>";
       }
       ?>
 
@@ -138,7 +142,7 @@ include ('layout/header.php');
           </div>
           <!-- first lesson -->
           <?php
-          $lesson_sql = $user_type == 'Teacher' ? "SELECT * FROM lessons WHERE teacherid = '$user_id' ORDER BY lessonDate ASC, lessonTime ASC" : "SELECT * FROM lessons WHERE studentid = '$user_id' ORDER BY lessonDate ASC, lessonTime ASC";
+          $lesson_sql = $user_type == 'Teacher' ? "SELECT * FROM lessons WHERE teacherid = '$user_id' AND studentid = '$distinct_id' ORDER BY lessonMonth DESC, lessonDate DESC, lessonTime DESC, lessonYear DESC" : "SELECT * FROM lessons WHERE studentid = '$user_id' AND teacherid = '$distinct_id' ORDER BY lessonMonth DESC, lessonDate DESC, lessonTime DESC, lessonYear DESC";
 
           $lesson_result = mysqli_query($conn, $lesson_sql);
           while ($lessons = mysqli_fetch_assoc($lesson_result)) {
