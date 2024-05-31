@@ -42,6 +42,7 @@
   <link rel="stylesheet" href="css/style.css" />
 
   <!-- Font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
   <script src="https://kit.fontawesome.com/e1ff686f95.js" crossorigin="anonymous"></script>
 
@@ -90,12 +91,9 @@
                   <a class="nav-link" href="lessons.php">Lessons</a>
                 </li>
 
-                <li class="nav-item mt-1 ms-2">
-                  <a class="nav-link" href="messages.php">Messages</a>
-                </li>
 
                 <li class="nav-item mt-1 ms-2">
-                  <a class="nav-link" href="materials.php">Material</a>
+                  <a class="nav-link" href="material.php">Material</a>
                 </li>
               <?php endif; ?>
 

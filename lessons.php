@@ -6,7 +6,7 @@ session_start();
 
 include 'config.php';
 include 'functions.php';
-$page = 'Profile view';
+$page = 'Lessons view';
 include ('layout/header.php');
 
 ?>
@@ -39,6 +39,7 @@ include ('layout/header.php');
       if ($lesson_result) {
         $count = 1;
         while ($lessons = mysqli_fetch_assoc($lesson_result)) {
+          $roomNo = $lessons['lessonid'];
           $day = $lessons['lessonDay'];
           $date = $lessons['lessonDate'];
           $month = $lessons['lessonMonth'];
@@ -89,7 +90,7 @@ include ('layout/header.php');
                 <td class="table-cell"><?php echo $subject_name ?></td>
                 <td class="table-cell"><?php echo $lesson_time; ?></td>
                 <td class="table-cell"><?php echo $lesson_status; ?></td>
-                <td class="table-cell"><a href="#">
+                <td class="table-cell"><a href="peerChat/index.php?room=<?php echo $roomNo ?>">
                     <button class="btn bg-green border border-1 border-dark py-1">Join Session</button>
                   </a></td>
               </tr>
@@ -146,6 +147,7 @@ include ('layout/header.php');
 
           $lesson_result = mysqli_query($conn, $lesson_sql);
           while ($lessons = mysqli_fetch_assoc($lesson_result)) {
+            $roomNo = $lessons['lessonid'];
             $day = $lessons['lessonDay'];
             $date = $lessons['lessonDate'];
             $month = $lessons['lessonMonth'];
@@ -165,9 +167,12 @@ include ('layout/header.php');
               <p><?php echo $lesson_time ?></p>
               <p><?php echo $subject_name ?></p>
               <p><?php echo $lesson_status ?></p>
-              <a href="#">
-                <button class="btn bg-green border border-1 border-dark py-1">Join Session</button>
+
+              <?php if($lesson_status == "Scheduled"): ?>
+              <a href="peerChat/index.php?room=<?php echo $roomNo?>">
+                <button class="btn bg-green border border-1 border-dark py-1 ">Join Session</button>
               </a>
+              <?php endif; ?>
             </div>
 
           <?php } ?>

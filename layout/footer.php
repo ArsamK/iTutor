@@ -77,5 +77,9 @@
           <script src="\iTutor\js\profile-view.js"></script>
         <?php }?>
 
+        <?php if($page =='Material'){?>
+          <script src="\iTutor\js\material.js"></script>
+        <?php }?>
+
     </body>
 </html>

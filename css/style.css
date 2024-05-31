@@ -746,6 +746,62 @@ ul {
 
 /* *******************************************Lessons end************************************************* */
 
+
+/* *********************************************Material Start*********************************************** */
+
+
+#userList {
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid #ddd;
+}
+
+#chatBox {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  flex-shrink: 0;
+}
+
+.chat-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.message {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  max-width: 60%;
+}
+
+.received {
+  background-color: #f1f1f1;
+  align-self: flex-start;
+}
+
+.sent {
+  background-color: #d1e7dd;
+  align-self: flex-end;
+}
+
+/* ***********************************************Material End************************************************** */
+
 /*********************************** media queries seciton start *******************************************/
 
 /* Small devices (phones, 576px and up) */
