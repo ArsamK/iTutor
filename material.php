@@ -26,7 +26,7 @@ $user_name = $_SESSION['userName'];
           while ($users = mysqli_fetch_assoc($userList_sql_result)) {
             //This userList_id is not same as user_id above because its otherwise of the user_id
             $userList_id = $user_type == 'Teacher' ? $users['studentid'] : $users['teacherid'];
-            
+
             //if user is a student than he will be shown the image and name of the teacher
             if ($user_type == 'Teacher') {
               $studentData_sql = "SELECT * FROM student WHERE studentid = '$userList_id'";
@@ -46,11 +46,11 @@ $user_name = $_SESSION['userName'];
               }
             }
 
-            echo '<a href="#" class="list-group-item list-group-item-action" data-user="'.$userList_id.'">
+            echo '<a href="#" class="list-group-item list-group-item-action" data-user="' . $userList_id . '">
             <div class="d-flex">
               <img class="img-fluid border border-dark border-1 rounded-2" style="width: 15%; padding:0;"
-                src="'.$img_url.'">
-              <div class="ps-2 fs-5">'.$name.'</div>
+                src="' . $img_url . '">
+              <div class="ps-2 fs-5">' . $name . '</div>
             </div>
           </a>';
 
@@ -61,13 +61,6 @@ $user_name = $_SESSION['userName'];
           ?>
 
           <a href="#" class="list-group-item list-group-item-action" data-user="user2">
-            <div class="d-flex">
-              <img class="img-fluid border border-dark border-1 rounded-2" style="width: 15%; padding:0;"
-                src="\iTutor\uploads\images\1710862998_777fc188788bbdf5.png">
-              <div class="ps-2 fs-5">Arsam khan</div>
-            </div>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action" data-user="user3">
             <div class="d-flex">
               <img class="img-fluid border border-dark border-1 rounded-2" style="width: 15%; padding:0;"
                 src="\iTutor\uploads\images\1710862998_777fc188788bbdf5.png">
@@ -88,11 +81,17 @@ $user_name = $_SESSION['userName'];
               <div class="message received">Hello from User 1</div>
               <div class="message received">How are you?</div>
             </div>
-            <label for="fileInput1" class="btn btn-primary mt-2 w-100">
-              <input type="file" class="form-control" id="fileInput1" style="display:none;">
-              Select File
-            </label>
-            <button class="btn btn-primary mt-2 w-100 send-file-btn" id="sendFileBtn1">Send File</button>
+            <div class="row">
+              <div class="col">
+                <label for="fileInput1" class="btn btn-primary mt-2">
+                  <input type="file" class="form-control" id="fileInput1" style="display:none;">
+                  Select File
+                </label>
+              </div>
+              <div class="col">
+                <button class="btn btn-primary mt-2 send-file-btn" id="sendFileBtn1">Send File</button>
+              </div>
+            </div>
           </div>
           <div id="user2" class="chat d-none">
             <button class="btn btn-secondary mb-2 back-to-list-btn" data-user="user2">&lt; Back to User List</button>
