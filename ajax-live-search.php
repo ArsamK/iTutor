@@ -118,11 +118,7 @@ if (!$result) {
               </div>';
       $output .= '<div class="col-lg-4">
               <!-- Ratings and price -->
-              <div class="row pb-5">
-                <div class="col">
-                  <div class="fw-bold fs-5"><img src="images/svg/star.svg">5</div>
-                  <div style="font-size:12px">4 reviews</div>
-                </div>
+              <div class="row pb-2 text-center">
                 <div class="col">
                   <div class="fw-bold fs-5">PKR ' . floor($row['rates']) . '</div>
                   <div style="font-size:12px">55-min lesson</div>
@@ -130,15 +126,10 @@ if (!$result) {
               </div>
               
               <!-- Buttons -->
-              <div class="row pt-3">
+              <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                   <a href="profile-view.php?id='.$currentTeacherid.'#schedule">
-                    <button class="py-2 px-4 my-1 fw-bold bg-green border border-2 rounded-2 border-dark w-100">Book trial lesson</button>
-                  </a>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                  <a href="#">
-                    <button class="py-2 px-4 my-1 fw-bold bg-white border border-2 rounded-2 border-dark w-100">Send message</button>
+                    <button class="py-2 px-4 my-1 fw-bold bg-green border border-2 rounded-2 border-dark w-100">Book lesson</button>
                   </a>
                 </div>
               </div>

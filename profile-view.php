@@ -348,10 +348,6 @@ if (isset($_GET['alert'])) {
             <!-- Ratings and price -->
             <div class="row py-3 text-center">
               <div class="col">
-                <div class="fw-bold fs-5"><img src="images/svg/star.svg">5</div>
-                <div style="font-size:12px">4 reviews</div>
-              </div>
-              <div class="col">
                 <div class="fw-bold fs-5">PKR
                   <?php echo floor($row['rates']); ?>
                 </div>
@@ -360,17 +356,9 @@ if (isset($_GET['alert'])) {
             </div>
 
             <div class="col-lg-12 col-md-12 col-sm-12">
-              <a href="#">
+              <a href="#schedule">
                 <button class="py-2 px-4 my-1 fw-bold bg-green border border-2 rounded-2 border-dark w-100">Book
-                  trial
                   lesson</button>
-              </a>
-            </div>
-
-            <div class="ol-lg-12 col-md-12 col-sm-12">
-              <a href="#">
-                <button class="py-2 px-4 my-1 fw-bold bg-white border border-2 rounded-2 border-dark w-100">Send
-                  message</button>
               </a>
             </div>
 

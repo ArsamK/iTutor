@@ -85,10 +85,6 @@ include ('layout/header.php');
               </a>
             </form>
 
-            <p class="text-center">
-              By signing up, you agree to iTutor's,
-              <b>Terms of Services,</b> and <b>Privacy Policy</b>
-            </p>
           </div>
         </div>
         <!-- //second column start -->
@@ -117,8 +113,8 @@ include ('layout/header.php');
             <div class="card-body">
               <h5 class="card-title pb-1">Set your own rate</h5>
               <p class="card-text">
-                Choose your hourly rate and change it anytime. On average,
-                English tutors charge $15-25 per hour.
+                Choose your hourly rate. On average,
+                Python tutors charge 1000-2500 PKR per hour.
               </p>
             </div>
           </div>
@@ -139,8 +135,7 @@ include ('layout/header.php');
             <div class="card-body">
               <h5 class="card-title pb-1">Grow professionally</h5>
               <p class="card-text">
-                Attend professional development webinars and get tips to
-                upgrade your skills. You’ll get all the help you need from
+                You’ll get all the help you need from
                 our team to grow.
               </p>
             </div>
@@ -184,10 +179,6 @@ include ('layout/header.php');
                 <img class="pe-2" src="images/svg/check-mark.svg" />Convenient payment
                 methods
               </li>
-              <li class="py-2">
-                <img class="pe-2" src="images/svg/check-mark.svg" />Supportive tutors
-                community
-              </li>
             </ul>
 
             <a href="#">
@@ -227,7 +218,7 @@ include ('layout/header.php');
         <div class="col">
           <div class="position-relative" style="width: 65%; top: 60px;">
             <h1 class="py-2">"iTutor allowed me to make a living without leaving home!"</h1>
-            <p class="pb-5"><b>Krista A.</b> Python tutor</p>
+            <p class="pb-5"><b>Dua A.</b> Python tutor</p>
             <a href="#">
               <button class="btn border border-dark border-2 bg-peach" style="font-weight: bold;">Become a
                 tutor</button>

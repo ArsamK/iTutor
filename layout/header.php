@@ -98,7 +98,7 @@
               <?php endif; ?>
 
               <li class="nav-item ms-2 mt-1">
-                <a class="nav-link ps-2" href="\iTutor\become-tutor.php?#frequently-asked-section">
+                <a class="nav-link ps-2" href="\iTutor\faq.php">
                   <span class="position-relative">
                     <span class="it-question">?</span>
                     <i class="circle"></i>

@@ -164,10 +164,6 @@ include ('layout/header.php');
 
       </form>
 
-      <p class="text-center">
-        By signing up, you agree to iTutor's,
-        <b>Terms of Services,</b> and <b>Privacy Policy</b>
-      </p>
     </div>
 
 
