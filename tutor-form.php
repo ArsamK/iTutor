@@ -1,6 +1,6 @@
 <?php
 
-// error_reporting(E_ERROR | E_PARSE);
+error_reporting(E_ERROR | E_PARSE);
 session_start();
 
 if(!isset($_SESSION['email'])){
@@ -412,9 +412,7 @@ include "layout/header.php";
       <div id="about-section" class="mb-5">
 
         <h2>About</h2>
-        <p>Start creating your public tutor profile. Your progress will be
-          automatically saved as you complete each section. You can
-          return at any time to finish your registration.</p>
+        <p>Start creating your public tutor profile.</p>
 
 
 
@@ -604,7 +602,7 @@ include "layout/header.php";
           <div class="form-check">
             <input class="form-check-input" type="checkbox" name="has_education" onchange="toggleEducationInputs()">
             <label class="form-check-label" for="flexCheckDefault">
-              I don't have a higher education defree yet!
+              I don't have a higher education degree yet!
             </label>
           </div>
         </div>
@@ -858,7 +856,7 @@ include "layout/header.php";
 
             <label for="headline" class="form-label" style="font-weight: bold;">4. Write a catchy headline</label>
             <p class="py-3">Your headline is the first thing students see about you. Make it
-              attention-grabbing, mention your specific teaching language
+              attention-grabbing, write 15 - 10 words headline
               and encourage students to read your full description.</p>
 
             <div class="form-floating">
@@ -1354,13 +1352,6 @@ include "layout/header.php";
             <div id="rate" class="form-text">Price in PKR</div>
           </div>
 
-
-          <div class="mb-3">
-            <div class="d-flex align-items-start px-2 py-1" style="background-color:#CCE2FF;">
-              <img class="pe-2" src="images/svg/warning-mark.svg">
-              <p>Change your base rate in setting after approval.</p>
-            </div>
-          </div>
 
         </div>
 

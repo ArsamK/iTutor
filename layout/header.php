@@ -109,7 +109,7 @@
               <?php if (isset($_SESSION['userId'])): ?>
                 <li class="nav-item mt-2 ms-2">
                 <div>
-                    <img style="width: 40px; height: 40px; cursor: pointer" title="<?php echo $_SESSION['userName'];?>" class="border border-1 border-dark rounded-2" src="<?php echo $_SESSION['userType'] == 'Teacher'?  'uploads/teacher_img/'.$_SESSION['userImg']: 'uploads/images/'. $_SESSION['userImg'] ?>">
+                    <img style="width: 40px; height: 40px; cursor: pointer" title="<?php echo $_SESSION['userType'] . ': ' . $_SESSION['userName'];?>" class="border border-1 border-dark rounded-2" src="<?php echo $_SESSION['userType'] == 'Teacher'?  'uploads/teacher_img/'.$_SESSION['userImg']: 'uploads/images/'. $_SESSION['userImg'] ?>">
                 </div>
                 </li>
               <?php endif; ?>

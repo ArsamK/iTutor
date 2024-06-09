@@ -50,7 +50,7 @@ $user_name = $_SESSION['userName'];
             <div class="d-flex">
               <img class="img-fluid border border-dark border-1 rounded-2" style="width: 15%; padding:0;"
                 src="' . $img_url . '">
-              <div class="ps-2 fs-5">' . $name . '</div>
+              <div class="ps-2 fs-5 uploaded-for-name">' . $name . '</div>
             </div>
           </a>';
 
@@ -60,67 +60,20 @@ $user_name = $_SESSION['userName'];
           }
           ?>
 
-          <a href="#" class="list-group-item list-group-item-action" data-user="user2">
-            <div class="d-flex">
-              <img class="img-fluid border border-dark border-1 rounded-2" style="width: 15%; padding:0;"
-                src="\iTutor\uploads\images\1710862998_777fc188788bbdf5.png">
-              <div class="ps-2 fs-5">Arsam khan</div>
-            </div>
-          </a>
         </div>
       </div>
       <!-- User list end -->
 
       <!-- User messages start -->
+      <!-- User messages start -->
       <div class="col-sm-12 col-md-9 p-0 d-flex flex-column" id="chatBoxContainer">
         <div id="chatBox" class="border flex-grow-1 p-3">
-          <div id="user1" class="chat d-none">
-            <button class="btn btn-secondary mb-2 back-to-list-btn" data-user="user1">&lt; Back to User List</button>
-            <div class="chat-header bg-primary text-white p-2">User 1</div>
-            <div class="chat-messages">
-              <div class="message received">Hello from User 1</div>
-              <div class="message received">How are you?</div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <label for="fileInput1" class="btn btn-primary mt-2">
-                  <input type="file" class="form-control" id="fileInput1" style="display:none;">
-                  Select File
-                </label>
-              </div>
-              <div class="col">
-                <button class="btn btn-primary mt-2 send-file-btn" id="sendFileBtn1">Send File</button>
-              </div>
-            </div>
-          </div>
-          <div id="user2" class="chat d-none">
-            <button class="btn btn-secondary mb-2 back-to-list-btn" data-user="user2">&lt; Back to User List</button>
-            <div class="chat-header bg-primary text-white p-2">User 2</div>
-            <div class="chat-messages">
-              <div class="message received">Hello from User 2</div>
-              <div class="message received">Good morning!</div>
-            </div>
-            <label for="fileInput2" class="btn btn-primary mt-2 w-100">
-              <input type="file" class="form-control" id="fileInput2" style="display:none;">
-              Select File
-            </label>
-            <button class="btn btn-primary mt-2 w-100 send-file-btn" id="sendFileBtn2">Send File</button>
-          </div>
-          <div id="user3" class="chat d-none">
-            <button class="btn btn-secondary mb-2 back-to-list-btn" data-user="user3">&lt; Back to User List</button>
-            <div class="chat-header bg-primary text-white p-2">User 3</div>
-            <div class="chat-messages">
-              <div class="message received">Hello from User 3</div>
-              <div class="message received">What's up?</div>
-            </div>
-            <label for="fileInput3" class="btn btn-primary mt-2 w-100">
-              <input type="file" class="form-control" id="fileInput3" style="display:none;">
-              Select File
-            </label>
-            <button class="btn btn-primary mt-2 w-100 send-file-btn" id="sendFileBtn3">Send File</button>
-          </div>
+          
+
         </div>
       </div>
+      <!-- User messages end -->
+
 
       <!-- User messages end -->
     </div>

@@ -17,6 +17,9 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+html, body {
+  height: 100%;
+}
 
 main {
   flex: 1;
@@ -757,10 +760,19 @@ ul {
   border-right: 1px solid #ddd;
 }
 
-#chatBox {
-  height: 100vh;
+#chatBoxContainer {
   display: flex;
   flex-direction: column;
+  height: calc(100vh - 10vh);
+}
+
+#chatBoxContainer::-webkit-scrollbar {
+  display: none;
+}
+
+#chatBox {
+  flex-grow: 1;
+  overflow-y: auto;
 }
 
 .chat-header {
@@ -806,6 +818,11 @@ ul {
   background-color: #d1e7dd;
   align-self: flex-end;
 }
+
+
+
+
+
 
 /* ***********************************************Material End************************************************** */
 
