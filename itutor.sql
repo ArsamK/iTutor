@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 09, 2024 at 07:59 PM
+-- Generation Time: Jun 09, 2024 at 08:09 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -20,41 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `itutor`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `admin`
---
-
-CREATE TABLE `admin` (
-  `adminid` int(11) NOT NULL,
-  `fname` varchar(50) NOT NULL,
-  `lname` varchar(50) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `phone` varchar(20) DEFAULT NULL,
-  `profilePic` blob DEFAULT NULL,
-  `registrationDate` date DEFAULT NULL,
-  `accountStatus` tinyint(1) DEFAULT NULL,
-  `gender` enum('Male','Female','Other') DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Triggers `admin`
---
-DELIMITER $$
-CREATE TRIGGER `Admin_AfterInsert` AFTER INSERT ON `admin` FOR EACH ROW BEGIN
-    INSERT INTO alluser (email, user_type) VALUES (NEW.email, 'Admin');
-END
-$$
-DELIMITER ;
-DELIMITER $$
-CREATE TRIGGER `Admin_DeleteTrigger` AFTER DELETE ON `admin` FOR EACH ROW BEGIN
-    DELETE FROM alluser WHERE email = OLD.email;
-END
-$$
-DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -239,34 +204,6 @@ INSERT INTO `material` (`id`, `filename`, `uploaded_for`, `uploaded_by`, `upload
 (23, 'zayyan ppt.pptx', '50', '17', 'Student'),
 (24, 'My New App.accdb', '50', '17', 'Student'),
 (25, 'Assignment 2 of SQA(th) Arsam khan 2007-bscs002.docx', '24', '17', 'Student');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `message`
---
-
-CREATE TABLE `message` (
-  `messageid` int(11) NOT NULL,
-  `senderemail` varchar(100) NOT NULL,
-  `receiveremail` varchar(100) NOT NULL,
-  `messageText` text DEFAULT NULL,
-  `timestamp` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `reviews`
---
-
-CREATE TABLE `reviews` (
-  `ReviewID` int(11) NOT NULL,
-  `Rating` int(11) DEFAULT NULL,
-  `Comment` text DEFAULT NULL,
-  `Reviewer` int(11) DEFAULT NULL,
-  `Reviewed` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -528,30 +465,9 @@ INSERT INTO `teacherlanguage` (`languageid`, `language`, `teacherid`) VALUES
 (24, 'Urdu', 49),
 (25, 'English', 50);
 
--- --------------------------------------------------------
-
---
--- Table structure for table `transactions`
---
-
-CREATE TABLE `transactions` (
-  `transactionid` int(11) NOT NULL,
-  `PaymentAmount` decimal(10,2) DEFAULT NULL,
-  `PaymentStatus` enum('Success','Pending','Failed') DEFAULT NULL,
-  `TransactionDate` datetime DEFAULT NULL,
-  `lessonid` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`adminid`),
-  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- Indexes for table `alluser`
@@ -586,22 +502,6 @@ ALTER TABLE `lessons`
 --
 ALTER TABLE `material`
   ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `message`
---
-ALTER TABLE `message`
-  ADD PRIMARY KEY (`messageid`),
-  ADD UNIQUE KEY `senderemail` (`senderemail`),
-  ADD UNIQUE KEY `receiveremail` (`receiveremail`);
-
---
--- Indexes for table `reviews`
---
-ALTER TABLE `reviews`
-  ADD PRIMARY KEY (`ReviewID`),
-  ADD KEY `Reviewer` (`Reviewer`),
-  ADD KEY `Reviewed` (`Reviewed`);
 
 --
 -- Indexes for table `student`
@@ -654,21 +554,8 @@ ALTER TABLE `teacherlanguage`
   ADD KEY `teacherid` (`teacherid`);
 
 --
--- Indexes for table `transactions`
---
-ALTER TABLE `transactions`
-  ADD PRIMARY KEY (`transactionid`),
-  ADD KEY `lessonid` (`lessonid`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `admin`
---
-ALTER TABLE `admin`
-  MODIFY `adminid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `alluser`
@@ -699,18 +586,6 @@ ALTER TABLE `lessons`
 --
 ALTER TABLE `material`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
-
---
--- AUTO_INCREMENT for table `message`
---
-ALTER TABLE `message`
-  MODIFY `messageid` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `reviews`
---
-ALTER TABLE `reviews`
-  MODIFY `ReviewID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `student`
@@ -755,12 +630,6 @@ ALTER TABLE `teacherlanguage`
   MODIFY `languageid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
--- AUTO_INCREMENT for table `transactions`
---
-ALTER TABLE `transactions`
-  MODIFY `transactionid` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- Constraints for dumped tables
 --
 
@@ -771,20 +640,6 @@ ALTER TABLE `lessons`
   ADD CONSTRAINT `lessons_ibfk_1` FOREIGN KEY (`teacherid`) REFERENCES `teacher` (`teacherid`),
   ADD CONSTRAINT `lessons_ibfk_2` FOREIGN KEY (`studentid`) REFERENCES `student` (`studentid`),
   ADD CONSTRAINT `lessons_ibfk_3` FOREIGN KEY (`subjectid`) REFERENCES `subject` (`subjectid`);
-
---
--- Constraints for table `message`
---
-ALTER TABLE `message`
-  ADD CONSTRAINT `message_ibfk_1` FOREIGN KEY (`senderemail`) REFERENCES `alluser` (`email`),
-  ADD CONSTRAINT `message_ibfk_2` FOREIGN KEY (`receiveremail`) REFERENCES `alluser` (`email`);
-
---
--- Constraints for table `reviews`
---
-ALTER TABLE `reviews`
-  ADD CONSTRAINT `reviews_ibfk_1` FOREIGN KEY (`Reviewer`) REFERENCES `student` (`studentid`),
-  ADD CONSTRAINT `reviews_ibfk_2` FOREIGN KEY (`Reviewed`) REFERENCES `teacher` (`teacherid`);
 
 --
 -- Constraints for table `teacher`
@@ -816,12 +671,6 @@ ALTER TABLE `teachereducation`
 --
 ALTER TABLE `teacherlanguage`
   ADD CONSTRAINT `teacherlanguage_ibfk_1` FOREIGN KEY (`teacherid`) REFERENCES `teacher` (`teacherid`);
-
---
--- Constraints for table `transactions`
---
-ALTER TABLE `transactions`
-  ADD CONSTRAINT `transactions_ibfk_1` FOREIGN KEY (`lessonid`) REFERENCES `lessons` (`lessonid`);
 
 DELIMITER $$
 --

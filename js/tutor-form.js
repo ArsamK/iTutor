@@ -46,25 +46,31 @@ document.querySelectorAll("textarea").forEach(textarea => {
 
 
 // For image preview
+$("#upload-button-alt").on("click", function() {
+  $('#upload-button').click();
 
-function handleFileSelect(event) {
-  const file = event.target.files[0];
-  if (!file) return;
+  $('#upload-button').on('change', function(event) {
+    const file = event.target.files[0];
+    // console.log(file);
+    if (!file) return;
 
-  const reader = new FileReader();
-  reader.onload = function(e) {
-    const img = document.createElement('img');
-    img.src = e.target.result;
-    img.classList.add('img-thumbnail');
-    document.getElementById('image-preview').innerHTML = '';
-    document.getElementById('image-preview').appendChild(img);
-  };
-  reader.readAsDataURL(file);
-}
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      const img = document.createElement('img');
+      img.src = e.target.result;
+      img.classList.add('img-thumbnail');
+      document.getElementById('image-preview').innerHTML = '';
+      document.getElementById('image-preview').appendChild(img);
+    };
+    reader.readAsDataURL(file);
+  });
+});
+
+
 
 // For video preview
+$('#video-link').on("change", function(){
 
-function previewVideo() {
   const input = document.getElementById('video-link');
   const url = input.value;
   let videoId;
@@ -91,7 +97,8 @@ function previewVideo() {
   } else {
     alert('Invalid YouTube video link');
   }
-}
+
+});
 
 
 
@@ -113,19 +120,22 @@ document.getElementById('add-language').addEventListener('click', function() {
 });
 
 // For certificates
+$('#has_certificate').on("change", function(){
 
-function toggleInputs() {
-    var inputs = document.querySelectorAll('#certificate-container input, #certificate-container select');
-    var addCertificate = document.getElementById('add-certificate');
+  var inputs = document.querySelectorAll('#certificate-container input, #certificate-container select');
+  var addCertificate = document.getElementById('add-certificate');
 
-    inputs.forEach(function(input) {
-      input.disabled = !input.disabled;
-      input.style.opacity = input.disabled ? 0.5 : 1;
-    });
+  inputs.forEach(function(input) {
+    input.disabled = !input.disabled;
+    input.style.opacity = input.disabled ? 0.5 : 1;
+  });
 
-    addCertificate.style.pointerEvents = addCertificate.style.pointerEvents === 'none' ? 'auto' : 'none';
-    addCertificate.style.opacity = addCertificate.style.opacity === '0.5' ? '1' : '0.5';
-}
+  addCertificate.style.pointerEvents = addCertificate.style.pointerEvents === 'none' ? 'auto' : 'none';
+  addCertificate.style.opacity = addCertificate.style.opacity === '0.5' ? '1' : '0.5';
+
+});
+
+
 
 document.getElementById('add-certificate').addEventListener('click', function () {
   var certificateContainer = document.getElementById('certificate-container');
@@ -141,19 +151,21 @@ document.getElementById('add-certificate').addEventListener('click', function ()
 
 
 // For Education
+$("#has_education").on("change", function(){
 
-function toggleEducationInputs() {
-    var inputs = document.querySelectorAll('#education-container input, #education-container select');
-    var addEducation = document.getElementById('add-education');
+  var inputs = document.querySelectorAll('#education-container input, #education-container select');
+  // console.log(inputs);
+  var addEducation = document.getElementById('add-education');
 
-    inputs.forEach(function(input) {
-      input.disabled = !input.disabled;
-      input.style.opacity = input.disabled ? 0.5 : 1;
-    });
+  inputs.forEach(function(input) {
+    input.disabled = !input.disabled;
+    input.style.opacity = input.disabled ? 0.5 : 1;
+  });
 
-    addEducation.style.pointerEvents = addEducation.style.pointerEvents === 'none' ? 'auto' : 'none';
-    addEducation.style.opacity = addEducation.style.opacity === '0.5' ? '1' : '0.5';
-  }
+  addEducation.style.pointerEvents = addEducation.style.pointerEvents === 'none' ? 'auto' : 'none';
+  addEducation.style.opacity = addEducation.style.opacity === '0.5' ? '1' : '0.5';
+
+});
 
   document.getElementById('add-education').addEventListener('click', function () {
     var educationContainer = document.getElementById('education-container');

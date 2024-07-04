@@ -497,18 +497,12 @@ include "layout/header.php";
 
         <div class="mb-3">
           <label for="country" class="form-label">Country</label>
-          <select class="form-select" name="country"
-            value="<?php echo isset($_POST['country']) ? $_POST['country'] : ''; ?>" required>
+          <select class="form-select" name="country" required>
             <option selected disabled>Select country</option>
-            <?php
-            $countryList = allCountries();
-            foreach ($countryList as $country) {
-              ?>
-              <option value="<?php echo $country; ?>">
-                <?php echo $country; ?>
+              <option value="pakistan">
+                Pakistan
               </option>
 
-            <?php } ?>
           </select>
         </div>
 
@@ -530,18 +524,17 @@ include "layout/header.php";
 
       </div>
 
+      <!-- Profile Picture -->
       <div id="picture-section" class="mb-5">
 
         <h2>Profile picture</h2>
         <label class="fw-bold py-3" style="font-size: 18px;">Make a great impression</label>
 
-
-
         <div class="mb-3">
           <input type="file" class="form-control visually-hidden" id="upload-button" name="picture"
-            onchange="handleFileSelect(event)" required>
-          <button type="button" class="btn btn-md bg-green border border-dark border-2 me-2 mb-2"
-            onclick="document.getElementById('upload-button').click();">Upload photo</button>
+            required>
+          <button type="button" id="upload-button-alt" class="btn btn-md bg-green border border-dark border-2 me-2 mb-2"
+            >Upload photo</button>
           <small style="color:#666;">JPG, JPEG or PNG format, maximum size 5MB.</small>
           <div id="image-preview" class="mt-2"></div>
         </div>
@@ -600,7 +593,7 @@ include "layout/header.php";
 
         <div class="mb-3">
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="has_education" onchange="toggleEducationInputs()">
+            <input class="form-check-input" type="checkbox" name="has_education" id="has_education">
             <label class="form-check-label" for="flexCheckDefault">
               I don't have a higher education degree yet!
             </label>
@@ -684,7 +677,7 @@ include "layout/header.php";
 
         <div class="mb-3">
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="has_certificate" onchange="toggleInputs()">
+            <input class="form-check-input" type="checkbox" name="has_certificate" id="has_certificate">
             <label class="form-check-label" for="flexCheckDefault">
               I don't have any certifications yet!
             </label>
@@ -1227,7 +1220,7 @@ include "layout/header.php";
         <div class="mb-3">
           <label for="video-link" class="form-label">Video link</label>
           <input type="text" class="form-control" id="video-link" name="video-link"
-            placeholder="Insert your link here..." oninput="previewVideo()">
+            placeholder="Insert your link here..." >
         </div>
         <div id="video-preview" class="mb-3"></div>
         <iframe width="100%" class="visually-hidden" src="" title="YouTube video player" frameborder="0"
